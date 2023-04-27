@@ -1,3 +1,19 @@
+<?php
+
+    session_start();
+
+    require_once 'server/connect.php';
+
+    $uID = $_SESSION['user']['uID'];
+
+    $sql = "SELECT * FROM subscriptions WHERE user_id = '$uID'";
+        $result = mysqli_query($connect, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            header('Location: crypto.php');
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +21,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CryptoSmart</title>
 </head>
 <body>
   <header style="background-color: #16db93;" class = "p-1 mb-1 text-white">
                 <div class = "container">
                     <div class = "row py-2">
                     <div class = "col-sm-6 text-lg-start">
-                    <a href = "main.php" class = "navbar-brand text-white fs-1">
+                    <a href = "profile.php" class = "navbar-brand text-white fs-1">
                         CryptoSmart <i class = "fa fa-cube"></i>
                     </a>
+                    <a href = "profile.php" class = "fw-bold mb-0">Back to Profile</a>
                 </div>
                 <div class = "col-sm-6 d-none d-md-flex text-white align-items-center nav-icons justify-content-end">
             </div>
