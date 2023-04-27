@@ -1,0 +1,87 @@
+.wrapper {	
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #16db93;
+}
+  
+.form-signup {
+    max-width: 550px;
+    padding: 15px 35px 45px;
+    margin-bottom: 100px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-left: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 3rem 5rem -2rem rgba(0, 0, 0, 0.2);
+}
+  
+.form-control {
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 1px;
+}
+
+.form-control:hover{
+    border-color: rgba(126, 239, 104, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+}
+
+.inner-addon { 
+      position: relative; 
+}
+  
+
+.inner-addon .glyphicon {
+    position: absolute;
+    top: 26px;
+    padding: 10px 20px 16px 18px;
+    background-color: rgba(0,0,0,0.05);
+    pointer-events: none;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+  
+.left-addon .glyphicon  { left:  0px;}
+  
+
+.left-addon input  { padding-left:  65px; }
+  
+.form-signup input {
+    margin-bottom:15px;
+    height:44px;
+}
+  
+.form-signup .forgot-password {
+    display: block;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-top:-8px;
+    margin-bottom:30px;
+    font-size:12px;
+}
+  
+.account-signup {
+    max-width: 550px;
+    padding: 15px 35px;
+    margin: 0 auto;
+    background-color: #16db93;
+}
+
+.btn{
+    border: 2px solid #fff;
+    width: 200px;
+    position: relative;
+    left: 30%;
+    background-color: #16db93;
+}
+
+.btn:hover {
+    background-color: #13bc7e;
+    border-color: #13bc7e;
+}
