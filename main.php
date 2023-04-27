@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Destiny</title>
+        <title>CryptoSmart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href = "css/bootstrap.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -344,7 +344,7 @@
 
                 <div class = "col-lg-4 pricing-item bg-green text-white text-center p-0 mb-5 mx-auto">
                     <div class = "pricing-title text-uppercase py-3 fs-5">Month trial</div>
-                    <div class = "pricing-price fs-1 fw-bold">$29<sup>99</sup></div>
+                    <div class = "pricing-price fs-1 fw-bold">$19<sup>99</sup></div>
                     <ul class = "px-0">
                         <li>Unlimited tool access</li>
                         <li>24/7 usage</li>
@@ -356,7 +356,7 @@
 
                 <div class = "col-lg-4 pricing-item bg-green text-white text-center p-0 mb-5 mx-auto">
                     <div class = "pricing-title text-uppercase py-3 fs-5">Year trial</div>
-                    <div class = "pricing-price fs-1 fw-bold">$49<sup>99</sup></div>
+                    <div class = "pricing-price fs-1 fw-bold">$99<sup>99</sup></div>
                     <ul class = "px-0">
                         <li>Unlimited tool access</li>
                         <li>24/7 usage</li>
