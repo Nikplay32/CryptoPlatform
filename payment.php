@@ -16,7 +16,7 @@
     <link rel = "stylesheet" href = "css/bootstrap.css">
     <link rel = "stylesheet" href = "css/payment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>CryptoSmart</title>
 </head>
 <style>
 body {
@@ -57,8 +57,8 @@ body {
         <input type="text" required class="form-control "/>
         <select name="option" class="form-select" aria-label="Default select example">
             <option selected>Select your subscription type</option>
-            <option value="Business plan">Business plan - 19.99$</option>
-            <option value="Year subscription">Year subscription - 199.99$</option>
+            <option value="Month subscription">Month subscription - 19.99$</option>
+            <option value="Year subscription">Year subscription - 99.99$</option>
         </select>
         <button class="btn mt-4 mb-2 " type="submit">Submit!</button>
         <?php 
