@@ -1,8 +1,25 @@
 <?php
     session_start();
 
+    require_once 'server/connect.php';
+
     if(!$_SESSION['user']) {
         header('Location: index.php');
+    }
+    if (isset($_SESSION['user']['isAdmin'])){
+        if ($_SESSION['user']['isAdmin'] === '1') {
+            header('Location: admin_panel.php');
+        }
+    }
+
+    $uID = $_SESSION['user']['uID'];
+
+    if(isset($_SESSION['user']['uID'])) {
+        $sql = "SELECT * FROM users as u INNER JOIN subscriptions as s ON u.id = s.user_id WHERE s.user_id = '$uID'";
+        $result = mysqli_query($connect, $sql);
+        $result = mysqli_fetch_assoc($result);
+    } else {
+        $result = array('type' => 'Free');
     }
 ?>
 
@@ -15,7 +32,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/profile.css">
-    <title>Document</title>
+    <title>CryptoSmart</title>
 </head>
 <style>
 body {
@@ -46,9 +63,9 @@ body {
                     </div>
                     <div class="text-center mt-3">
                         <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span>
-                        <h5 class="mt-2 mb-0"><?= $_SESSION['user']['full_name'] ?></h5>
+                        <h5 class="mt-2 mb-0"><?= $_SESSION['user']['name'] ?></h5>
                         <span><?= $_SESSION['user']['email'] ?></span><br>
-                        <span>Subscription Type: <?= $_SESSION['user']['email'] ?></span>
+                        <span>Subscription Type: <?= isset($result['type']) ? $result['type'] : 'Free';?></span>
                         <div class="px-4 mt-1">
                             <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                         </div>
