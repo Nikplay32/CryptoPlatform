@@ -1,3 +1,19 @@
+<?php
+
+    session_start();
+
+    require_once 'server/connect.php';
+
+    $uID = $_SESSION['user']['uID'];
+
+    $sql = "SELECT * FROM subscriptions WHERE user_id = '$uID'";
+        $result = mysqli_query($connect, $sql);
+
+        if (!mysqli_num_rows($result) > 0) {
+            header('Location: trading.php');
+        } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +23,7 @@
     <link rel = "stylesheet" href = "css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/crypto.css">
-    <title>Document</title>
+    <title>CryptoSmart</title>
 </head>
 <body>
     <header class = "p-1 mb-1 navbar text-white">
@@ -17,7 +33,7 @@
                     <a href = "profile.php" class = "navbar-brand text-white fs-1">
                         CryptoSmart <i class = "fa fa-cube"></i>
                     </a>
-                    <a class = "fw-bold mb-0">Back to Profile</a>
+                    <a href = "profile.php" class = "fw-bold mb-0">Back to Profile</a>
                 </div>
                 <div class = "col-sm-6 d-none d-md-flex text-white align-items-center nav-icons justify-content-end">
             </div>
